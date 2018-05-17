@@ -1,0 +1,3 @@
+# Coursera.org: Algorithms, Part 1
+
+These are my notes for Coursera course [Algorithms, Part I](https://www.coursera.org/learn/algorithms-part1) by [Kevin Wayne](https://www.coursera.org/instructor/~246867) and [Robert Sedgewick](https://www.coursera.org/instructor/~250165), Princeton University. Special thanks to [Tara Walker](https://www.linkedin.com/in/taraewalker/) for recommending this course to me. I have decided to take this course and learn Python and Jupyter notebooks on Azure simultaneously. Failure is an option 😏
