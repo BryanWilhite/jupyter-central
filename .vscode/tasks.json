@@ -1,0 +1,17 @@
+{
+    "version": "2.0.0",
+
+    "tasks": [
+        {
+            "command": "jupyter",
+            "label": "jupyter notebook [next to currently opened file]",
+            "isBackground": false,
+            "type": "shell",
+            "args": ["notebook"],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": []
+        }
+    ]
+}
