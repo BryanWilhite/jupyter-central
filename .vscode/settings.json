@@ -11,5 +11,6 @@
         "MD002": false, //first header should be a top-level header
         "MD036": false, //emphasis used instead of header
         "MD041": false //first line in file should be a top-level header
-    }
+    },
+    "python.pythonPath": "C:\\tools\\Anaconda3\\python.exe"
 }
