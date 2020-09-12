@@ -57,4 +57,9 @@ A word from Microsoft:
 
 Going forward, Microsoft recommends [their alternatives](https://notebooks.azure.com/Content/alternatives.html) which include [notebooks in Visual Studio Code](https://docs.microsoft.com/en-us/azure/notebooks/quickstart-export-jupyter-notebook-project#use-notebooks-in-visual-studio-code).
 
+## related links
+
+- docs.conda.io
+- “[Keeping Anaconda Up To Date](https://www.anaconda.com/blog/keeping-anaconda-date)”
+
 @[BryanWilhite](https://twitter.com/bryanwilhite)
