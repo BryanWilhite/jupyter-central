@@ -4,9 +4,9 @@ This repo is an attempt to centralize my little collection of [jupyter notebooks
 
 So far, I have only hosted my notebooks on Azure (see “notebooks.azure.com” below) and effectively [here](https://github.com/BryanWilhite/jupyter-central#README) in this repo on GitHub.
 
-## my desktop setup
+## my cross-platform desktop setup
 
-My studio Jupyter environment is built on top of [Anaconda which is installed via Chocolatey on Windows](https://chocolatey.org/packages/anaconda3). I then follow along with Microsoft’s plans for [.NET Interactive Notebooks](https://github.com/dotnet/interactive) by installing the 32-bit version of the .NET SDK 3.x and running the following:
+My studio Jupyter environment is built on top of [Anaconda which is installed via Chocolatey on Windows](https://chocolatey.org/packages/anaconda3). (See “installing Anaconda on Ubuntu” below.) I then follow along with Microsoft’s plans for [.NET Interactive Notebooks](https://github.com/dotnet/interactive) by installing the 32-bit version of the .NET SDK 3.x and running the following:
 
 ```powershell
  dotnet tool install --global Microsoft.dotnet-interactive
@@ -22,6 +22,32 @@ Available kernels:
 ```
 
 And, yes, Microsoft has a [Jupyter kernel for PowerShell](https://devblogs.microsoft.com/powershell/public-preview-of-powershell-support-in-jupyter-notebooks/). And do recall that Microsoft wants all of this work on Linux (and the Macintosh) as well.
+
+## installing Anaconda on Ubuntu desktop
+
+“[How to Install Anaconda on Ubuntu 20.04](https://linuxize.com/post/how-to-install-anaconda-on-ubuntu-20-04/)” serves as my guide for setting up Anaconda on Ubuntu desktop:
+
+```bash
+sudo apt install \
+  libgl1-mesa-glx \
+  libegl1-mesa \
+  libxrandr2 \
+  libxrandr2 \
+  libxss1 \
+  libxcursor1 \
+  libxcomposite1 \
+  libasound2 \
+  libxi6 \
+  libxtst6
+
+wget -P . https://repo.anaconda.com/archive/Anaconda3-2020.07-Linux-x86_64.sh
+sha256sum Anaconda3-2020.07-Linux-x86_64.sh
+bash Anaconda3-2020.07-Linux-x86_64.sh
+
+anaconda-navigator
+
+conda update --all
+```
 
 ## notebooks.azure.com
 
