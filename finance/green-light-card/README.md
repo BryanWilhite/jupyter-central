@@ -15,6 +15,7 @@ Anyway, the plan here is simple:
 This savings is meant for my daughter to secure her first consumer credit card with cash when she turns 18 years of age. But first this experience intends to provide my daughter with:
 
 - a sometimes painful but rewarding relationship with delayed gratification
+- a lonely but exceedingly profitable relationship with self-organization
 - a direct relationship with [compound interest](https://en.wikipedia.org/wiki/Compound_interest)
 - ideally, an introduction to what my father calls [_longsuffering_](https://www.blueletterbible.org/search/search.cfm?Criteria=longsuffering&t=KJV#s=s_primary_0_1) and keeping one’s word
 
