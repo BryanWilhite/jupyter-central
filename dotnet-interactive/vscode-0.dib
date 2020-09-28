@@ -1,0 +1,53 @@
+#!markdown
+
+# The .NET Interactive File Format `*.dib`
+
+## `*.dib` in Visual Studio Code
+
+### 2020-09
+
+It’s early days. 😬🤷🚧 A tour-bus full of folks under the umbrella [nteract.io](https://nteract.io/about) are working on a mixture of [Jupyter kernels](https://nteract.io/kernels), [a React-based SDK](https://nteract.io/sdk), various [applications](https://nteract.io/applications) (like the [nteract desktop application](https://github.com/nteract/nteract/releases/latest)) and a small collection of [libraries](https://nteract.io/libraries). There is no mention of nteract people working with the `*.dib` file format and the [.NET Interactive Notebooks Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-interactive-vscode) extension. This is a completely separate thing under an Insiders program.
+
+Microsoft recommends the use of [Visual Studio Code Insiders](https://code.visualstudio.com/insiders/) to run .NET Interactive Notebooks in Visual Studio Code. I am, of course, not running the Insiders version and am probably paying the price for not wanting to turn my environments into experiments.
+
+The [.NET Interactive Notebooks Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-interactive-vscode) takes care to make mention of these points:
+
+#!markdown
+
+### “To open an existing Jupyter notebook (`.ipynb`), run the VS Code command .NET Interactive: Open notebook and select the file you would like to open.”
+
+This guidance is _very_ important because not doing this will run the Jupyter notebook experience in the [Python extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-python.python). I am, of course, running [.NET Interactive Notebooks Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-interactive-vscode) and the Python extension at the same time 😬🔥 This allows me to work in the ‘older’ (`*.ipynb`) world while Insiders are at work on the newer stuff.
+
+There is [a known issue](https://github.com/dotnet/interactive/issues/786) with running both of these extensions:
+
+> `TypeError: Cannot read property 'charAt' of undefined at`…This is coming from the Python extension, not .NET Interactive. If you have both extensions installed, you can open the notebook in .NET Interactive using the command palette command `.NET Interactive: Open notebook`.
+
+The palette command experience brings up a file-open dialog that takes me right out of the Visual Studio Code ‘flow’ that I am used to. So what I am doing for now is working (mostly in Python) with `*.ipynb` under the Python extension which denies me the markdown experience I am built up in Visual Studio Code. The Markdown cells in .NET Interactive notebooks (`*.dib`) looks almost like any markdown file opened in Visual Studio Code which explains (to me) why Microsoft is using a different file format.
+
+#!markdown
+
+### “You can create a notebook by creating a new file with the .dib extension and opening it.”
+
+This is my recommended way of dropping into the .NET Interactive notebook experince (avoiding that disruptive dialog). I, by the way, use this ‘flow’ for `*.ipynb` as well (to use the Python extention).
+
+#!markdown
+
+### A note on the `.dib` file format: Improved support for reading and writing Jupyter notebooks (`.ipynb`) is coming soon. For more information, please see <https://github.com/dotnet/interactive/issues/467>.
+
+[Jon Sequeira](https://github.com/jonsequitur) opens a discussion under issue [#467](https://github.com/dotnet/interactive/issues/467), trying to explain why the `*.dib` format is around:
+
+>The primary reason for the experimental file format supported by .NET Interactive Notebooks is that there are a few design decisions to be worked out to enable the Microsoft Python extension for Visual Studio Code and the .NET Interactive Notebooks extension to work well together. Until a design is agreed upon, we want to avoid introducing potential compatibility issues into `.ipynb`.
+
+#!markdown
+
+### Advantages of .NET Interactive Notebooks in Visual Studio Code
+
+The most annoying thing about notebooks under the Python extension is the inability to set focus on notebook cells with keystrokes. The mouse _is_ required. This is not the case with .NET Interactive.
+
+The .NET Interactive experience is Visual-Studio-Code-aware which means the markdown experience is far better (as mentioned previously). Switching to another editor window does not cause the cell to drop out of edit mode.
+
+Based on strong suggestions from Microsoft, it is clear that some of these advantages will trickle around to the Python extension.
+
+#!markdown
+
+@[BryanWilhite](https://twitter.com/BryanWilhite)
