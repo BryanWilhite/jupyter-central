@@ -14,6 +14,7 @@ Anyway, the plan here is simple:
 
 This savings is meant for my daughter to secure her first consumer credit card with cash when she turns 18 years of age. But first this experience intends to provide my daughter with:
 
+- an example of how one can be incredibly inaccurate but incredibly consistent
 - a sometimes painful but rewarding relationship with delayed gratification
 - a lonely but exceedingly profitable relationship with self-organization
 - a direct relationship with [compound interest](https://en.wikipedia.org/wiki/Compound_interest)
