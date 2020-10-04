@@ -6,7 +6,7 @@
 
 ### 2020-09
 
-It’s early days. 😬🤷🚧 A tour-bus full of folks under the umbrella [nteract.io](https://nteract.io/about) are working on a mixture of [Jupyter kernels](https://nteract.io/kernels), [a React-based SDK](https://nteract.io/sdk), various [applications](https://nteract.io/applications) (like the [nteract desktop application](https://github.com/nteract/nteract/releases/latest)) and a small collection of [libraries](https://nteract.io/libraries). There is no mention of nteract people working with the `*.dib` file format and the [.NET Interactive Notebooks Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-interactive-vscode) extension. This is a completely separate thing under an Insiders program.
+It’s early days. 😬🤷🚧 A tour-bus full of folks under the umbrella [nteract.io](https://nteract.io/about) are working on a mixture of [Jupyter kernels](https://nteract.io/kernels), [a React-based SDK](https://nteract.io/sdk), various [applications](https://nteract.io/applications) (like the [nteract desktop application](https://github.com/nteract/nteract/releases/latest)) and a small collection of [libraries](https://nteract.io/libraries). There is no mention of nteract people working with the `*.dib` file format and the [.NET Interactive Notebooks Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-interactive-vscode) extension. This is a completely separate thing under an Insiders program. [Maria Naggaga](https://devblogs.microsoft.com/dotnet/author/mnaggaga/) is the subject matter expert for .NET Interacive Notebooks.
 
 Microsoft recommends the use of [Visual Studio Code Insiders](https://code.visualstudio.com/insiders/) to run .NET Interactive Notebooks in Visual Studio Code. I am, of course, not running the Insiders version and am probably paying the price for not wanting to turn my environments into experiments.
 
@@ -41,6 +41,32 @@ This is my recommended way of dropping into the .NET Interactive notebook experi
 #!markdown
 
 ### Advantages of .NET Interactive Notebooks in Visual Studio Code
+
+Maria Naggaga [leads](https://devblogs.microsoft.com/dotnet/net-interactive-preview-3-vs-code-insiders-and-polyglot-notebooks/) with the most important feature of the .NET Interactive experience:
+
+>With the VS Code Insiders experience, users can get started with .NET notebooks without needing to install Jupyter.
+
+The other major advantage of the `*dib` format is the “polyglot” support:
+
+#!csharp
+
+var current_directory = System.IO.Directory.GetCurrentDirectory();
+Console.WriteLine($"{nameof(current_directory)}: {current_directory}")
+
+#!csharp
+
+$current_directory = [System.IO.Directory]::GetCurrentDirectory()
+Write-Output $current_directory
+
+#!markdown
+
+Here are some comments about the code cells above:
+
+- Current examples I have seen from Microsoft suggest that C# output will not be seen unless `Console.WriteLine()` is called. I assume the same limitation is in PowerShell.
+- The PowerShell cell is lit up with red squigglies for code that is syntactically correct. I assume this is the price I am paying for not using the Insiders version of Visual Studio Code.
+- I am not seeing how to choose Python as a language in this notebook.
+
+Here are some minor advantages of the `*.dib` format:
 
 The most annoying thing about notebooks under the Python extension is the inability to set focus on notebook cells with keystrokes. The mouse _is_ required. This is not the case with .NET Interactive.
 
