@@ -12,6 +12,5 @@
         "MD036": false, //emphasis used instead of header
         "MD041": false //first line in file should be a top-level header
     },
-    "python.dataScience.jupyterServerURI": "local",
-    "python.pythonPath": "/home/rasx/anaconda3/bin/python"
+    "python.dataScience.jupyterServerURI": "local"
 }
