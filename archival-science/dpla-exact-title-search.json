@@ -1,0 +1,404 @@
+{
+    "count": 2,
+    "docs": [
+        {
+            "@context": "http://dp.la/api/items/context",
+            "@id": "http://dp.la/api/items/047f1c45f0ec0acbc12f54e86ae99748",
+            "@type": "ore:Aggregation",
+            "admin": {
+                "object_status": 1
+            },
+            "aggregatedCHO": "#sourceResource",
+            "dataProvider": "General Research Division. The New York Public Library",
+            "id": "047f1c45f0ec0acbc12f54e86ae99748",
+            "ingestDate": "2018-10-05T00:40:17.032805Z",
+            "ingestType": "item",
+            "isShownAt": "http://digitalcollections.nypl.org/items/510d47db-d501-a3d9-e040-e00a18064a99",
+            "object": "http://images.nypl.org/index.php?id=495240&t=t",
+            "originalRecord": {
+                "collection": {
+                    "@id": "http://dp.la/api/collections/267f1bbc5ed3a20ce9e448c6e2d206a6",
+                    "id": "267f1bbc5ed3a20ce9e448c6e2d206a6"
+                },
+                "genre": {
+                    "#text": "Book jackets",
+                    "authority": "lctgm",
+                    "valueURI": "http://id.loc.gov/vocabulary/graphicMaterials/tgm001209"
+                },
+                "identifier": [
+                    {
+                        "#text": "b14969583",
+                        "displayLabel": "NYPL catalog ID (B-number)",
+                        "type": "local_bnumber"
+                    },
+                    {
+                        "#text": "157",
+                        "displayLabel": "Hades Collection Guide ID (legacy)",
+                        "type": "local_hades_collection"
+                    },
+                    {
+                        "#text": "33433000024186",
+                        "displayLabel": "Barcode",
+                        "type": "local_barcode"
+                    },
+                    {
+                        "#text": "306214",
+                        "displayLabel": "Hades struc ID (legacy)",
+                        "type": "local_hades"
+                    },
+                    {
+                        "#text": "2366b990-c5b7-012f-9ac0-58d385a7bc34",
+                        "type": "uuid"
+                    }
+                ],
+                "location": [
+                    {
+                        "physicalLocation": [
+                            {
+                                "#text": "nn",
+                                "authority": "marcorg",
+                                "type": "repository"
+                            },
+                            {
+                                "#text": "General Research Division",
+                                "type": "division"
+                            },
+                            {
+                                "#text": "General Research Division",
+                                "type": "division_short_name"
+                            },
+                            {
+                                "#text": "GRD",
+                                "type": "code"
+                            }
+                        ],
+                        "shelfLocator": "*IIA+ (New York Public Library. Collection of book jackets) Library has: 1926/27-1947"
+                    },
+                    {
+                        "shelfLocator": "*IIA+ (New York Public Library. Collection of book jackets) 1933"
+                    },
+                    {
+                        "physicalLocation": [
+                            {
+                                "#text": "General Research Division",
+                                "type": "division"
+                            },
+                            {
+                                "#text": "General Research Division",
+                                "type": "division_short_name"
+                            },
+                            {
+                                "#text": "GRD",
+                                "type": "code"
+                            }
+                        ]
+                    }
+                ],
+                "note": {
+                    "#text": "Includes also jackets of the books published in 1932, a few of other years.",
+                    "type": "content"
+                },
+                "originInfo": {
+                    "dateIssued": {
+                        "#text": "1933",
+                        "encoding": "w3cdtf",
+                        "keyDate": "yes"
+                    }
+                },
+                "provider": {
+                    "@id": "http://dp.la/api/contributor/nypl",
+                    "name": "The New York Public Library"
+                },
+                "relatedItem": {
+                    "identifier": [
+                        {
+                            "#text": "1fb9fbe0-c5b7-012f-dede-58d385a7bc34",
+                            "type": "uuid"
+                        },
+                        {
+                            "#text": "304489 local_barcode",
+                            "type": "local_hades"
+                        }
+                    ],
+                    "relatedItem": {
+                        "identifier": [
+                            {
+                                "#text": "274b79c0-c5b6-012f-1730-58d385a7bc34",
+                                "type": "uuid"
+                            },
+                            {
+                                "#text": "304473 oclc",
+                                "type": "local_hades"
+                            }
+                        ],
+                        "titleInfo": {
+                            "title": "Collection of book jackets"
+                        },
+                        "type": "host"
+                    },
+                    "titleInfo": {
+                        "title": "1933."
+                    },
+                    "type": "host"
+                },
+                "rightsStatementURI": "http://rightsstatements.org/vocab/UND/1.0/",
+                "schemaLocation": "http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-4.xsd",
+                "titleInfo": {
+                    "supplied": "no",
+                    "title": "The mis-education of the Negro.",
+                    "usage": "primary"
+                },
+                "tmp_high_res_link": null,
+                "tmp_image_id": "495240",
+                "tmp_item_link": "http://digitalcollections.nypl.org/items/510d47db-d501-a3d9-e040-e00a18064a99",
+                "tmp_rights_statement": "The copyright and related rights status of this item has been reviewed by The New York Public Library, but we were unable to make a conclusive determination as to the copyright status of the item. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.",
+                "typeOfResource": [
+                    {
+                        "#text": "text",
+                        "collection": "yes"
+                    },
+                    "still image"
+                ],
+                "version": "3.4"
+            },
+            "provider": {
+                "@id": "http://dp.la/api/contributor/nypl",
+                "name": "The New York Public Library"
+            },
+            "rights": "http://rightsstatements.org/vocab/UND/1.0/",
+            "sourceResource": {
+                "@id": "http://dp.la/api/items/047f1c45f0ec0acbc12f54e86ae99748#sourceResource",
+                "collection": {
+                    "@id": "http://dp.la/api/collections/267f1bbc5ed3a20ce9e448c6e2d206a6",
+                    "id": "267f1bbc5ed3a20ce9e448c6e2d206a6",
+                    "title": "Collection of book jackets"
+                },
+                "date": {
+                    "begin": "1933",
+                    "displayDate": "1933",
+                    "end": "1933"
+                },
+                "description": [
+                    "Includes also jackets of the books published in 1932, a few of other years."
+                ],
+                "format": "Book jackets",
+                "hasType": "Book jackets",
+                "relation": [
+                    "1933",
+                    "Collection of book jackets"
+                ],
+                "stateLocatedIn": [
+                    {
+                        "name": "New York"
+                    }
+                ],
+                "title": "The mis-education of the Negro",
+                "type": [
+                    "text",
+                    "image"
+                ]
+            }
+        },
+        {
+            "@context": "http://dp.la/api/items/context",
+            "@id": "http://dp.la/api/items/a8f0c8141304f2b3227073731831bd5a",
+            "@type": "ore:Aggregation",
+            "admin": {
+                "object_status": 1
+            },
+            "aggregatedCHO": "#sourceResource",
+            "dataProvider": "General Research Division. The New York Public Library",
+            "id": "a8f0c8141304f2b3227073731831bd5a",
+            "ingestDate": "2018-10-05T00:40:17.110428Z",
+            "ingestType": "item",
+            "isShownAt": "http://digitalcollections.nypl.org/items/510d47db-d500-a3d9-e040-e00a18064a99",
+            "object": "http://images.nypl.org/index.php?id=1103643&t=t",
+            "originalRecord": {
+                "collection": {
+                    "@id": "http://dp.la/api/collections/267f1bbc5ed3a20ce9e448c6e2d206a6",
+                    "id": "267f1bbc5ed3a20ce9e448c6e2d206a6"
+                },
+                "genre": {
+                    "#text": "Book jackets",
+                    "authority": "lctgm",
+                    "valueURI": "http://id.loc.gov/vocabulary/graphicMaterials/tgm001209"
+                },
+                "identifier": [
+                    {
+                        "#text": "b14969583",
+                        "displayLabel": "NYPL catalog ID (B-number)",
+                        "type": "local_bnumber"
+                    },
+                    {
+                        "#text": "157",
+                        "displayLabel": "Hades Collection Guide ID (legacy)",
+                        "type": "local_hades_collection"
+                    },
+                    {
+                        "#text": "33433000024186",
+                        "displayLabel": "Barcode",
+                        "type": "local_barcode"
+                    },
+                    {
+                        "#text": "306214",
+                        "displayLabel": "Hades struc ID (legacy)",
+                        "type": "local_hades"
+                    },
+                    {
+                        "#text": "2366b990-c5b7-012f-9ac0-58d385a7bc34",
+                        "type": "uuid"
+                    }
+                ],
+                "location": [
+                    {
+                        "physicalLocation": [
+                            {
+                                "#text": "nn",
+                                "authority": "marcorg",
+                                "type": "repository"
+                            },
+                            {
+                                "#text": "General Research Division",
+                                "type": "division"
+                            },
+                            {
+                                "#text": "General Research Division",
+                                "type": "division_short_name"
+                            },
+                            {
+                                "#text": "GRD",
+                                "type": "code"
+                            }
+                        ],
+                        "shelfLocator": "*IIA+ (New York Public Library. Collection of book jackets) Library has: 1926/27-1947"
+                    },
+                    {
+                        "shelfLocator": "*IIA+ (New York Public Library. Collection of book jackets) 1933"
+                    },
+                    {
+                        "physicalLocation": [
+                            {
+                                "#text": "General Research Division",
+                                "type": "division"
+                            },
+                            {
+                                "#text": "General Research Division",
+                                "type": "division_short_name"
+                            },
+                            {
+                                "#text": "GRD",
+                                "type": "code"
+                            }
+                        ]
+                    }
+                ],
+                "note": {
+                    "#text": "Includes also jackets of the books published in 1932, a few of other years.",
+                    "type": "content"
+                },
+                "originInfo": {
+                    "dateIssued": {
+                        "#text": "1933",
+                        "encoding": "w3cdtf",
+                        "keyDate": "yes"
+                    }
+                },
+                "provider": {
+                    "@id": "http://dp.la/api/contributor/nypl",
+                    "name": "The New York Public Library"
+                },
+                "relatedItem": {
+                    "identifier": [
+                        {
+                            "#text": "1fb9fbe0-c5b7-012f-dede-58d385a7bc34",
+                            "type": "uuid"
+                        },
+                        {
+                            "#text": "304489 local_barcode",
+                            "type": "local_hades"
+                        }
+                    ],
+                    "relatedItem": {
+                        "identifier": [
+                            {
+                                "#text": "274b79c0-c5b6-012f-1730-58d385a7bc34",
+                                "type": "uuid"
+                            },
+                            {
+                                "#text": "304473 oclc",
+                                "type": "local_hades"
+                            }
+                        ],
+                        "titleInfo": {
+                            "title": "Collection of book jackets"
+                        },
+                        "type": "host"
+                    },
+                    "titleInfo": {
+                        "title": "1933."
+                    },
+                    "type": "host"
+                },
+                "rightsStatementURI": "http://rightsstatements.org/vocab/UND/1.0/",
+                "schemaLocation": "http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-4.xsd",
+                "titleInfo": {
+                    "supplied": "no",
+                    "title": "The mis-education of the Negro.",
+                    "usage": "primary"
+                },
+                "tmp_high_res_link": null,
+                "tmp_image_id": "1103643",
+                "tmp_item_link": "http://digitalcollections.nypl.org/items/510d47db-d500-a3d9-e040-e00a18064a99",
+                "tmp_rights_statement": "The copyright and related rights status of this item has been reviewed by The New York Public Library, but we were unable to make a conclusive determination as to the copyright status of the item. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.",
+                "typeOfResource": [
+                    {
+                        "#text": "text",
+                        "collection": "yes"
+                    },
+                    "still image"
+                ],
+                "version": "3.4"
+            },
+            "provider": {
+                "@id": "http://dp.la/api/contributor/nypl",
+                "name": "The New York Public Library"
+            },
+            "rights": "http://rightsstatements.org/vocab/UND/1.0/",
+            "sourceResource": {
+                "@id": "http://dp.la/api/items/a8f0c8141304f2b3227073731831bd5a#sourceResource",
+                "collection": {
+                    "@id": "http://dp.la/api/collections/267f1bbc5ed3a20ce9e448c6e2d206a6",
+                    "id": "267f1bbc5ed3a20ce9e448c6e2d206a6",
+                    "title": "Collection of book jackets"
+                },
+                "date": {
+                    "begin": "1933",
+                    "displayDate": "1933",
+                    "end": "1933"
+                },
+                "description": [
+                    "Includes also jackets of the books published in 1932, a few of other years."
+                ],
+                "format": "Book jackets",
+                "hasType": "Book jackets",
+                "relation": [
+                    "1933",
+                    "Collection of book jackets"
+                ],
+                "stateLocatedIn": [
+                    {
+                        "name": "New York"
+                    }
+                ],
+                "title": "The mis-education of the Negro",
+                "type": [
+                    "text",
+                    "image"
+                ]
+            }
+        }
+    ],
+    "facets": [],
+    "limit": 10,
+    "start": 1
+}
