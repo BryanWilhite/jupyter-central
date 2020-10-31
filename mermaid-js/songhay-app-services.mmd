@@ -1,0 +1,47 @@
+graph LR
+   subgraph "fa:fa-code Azure DevOps&nbsp;&nbsp;&nbsp;&nbsp;"
+      kinte-space
+      Songhay.GenericWeb
+      Songhay.Player
+   end
+
+   subgraph "fa:fa-github-alt fa:fa-code GitHub&nbsp;&nbsp;&nbsp;&nbsp;"
+      day-path
+      nodejs
+      songhay-core
+      SonghayCore
+      Songhay.Affiliates
+      Songhay.Dashboard
+      Songhay.Feeds
+      Songhay.Publications
+      Songhay.Social
+      the-funky-knowledge-base
+   end
+
+   subgraph "fa:fa-server A2 Hosting&nbsp;&nbsp;&nbsp;&nbsp;"
+      kinte-space-->kintespace.com
+   end
+
+   subgraph "fa:fa-server Azure App Service&nbsp;&nbsp;&nbsp;&nbsp;"
+      brollplayer.azurewebsites.net/swagger
+      Songhay.Feeds-->job-feeds["fa:fa-cog fa:fa-calendar songhay-system.scm.azurewebsites.net/*/job-feeds/run&nbsp;&nbsp;"]
+      Songhay.Dashboard-->job-studio-dash["fa:fa-cog fa:fa-calendar songhay-system.scm.azurewebsites.net/*/job-studio-dash/run&nbsp;&nbsp;"]
+      Songhay.Player-->job-yt["fa:fa-cog fa:fa-calendar songhay-system.scm.azurewebsites.net/*/job-yt/run&nbsp;&nbsp;"]
+      inourterribleness.com
+      Songhay.Dashboard-->songhaysystem.com
+      Songhay.Affiliates-->api-affiliates["fa:fa-cog songhaysystem.com/api-affiliates&nbsp;&nbsp;"]
+      Songhay.GenericWeb-->api-genweb["fa:fa-cog songhaysystem.com/api-genweb/swagger&nbsp;&nbsp;"]
+      Songhay.Social-->api-social["fa:fa-cog songhaysystem.com/api-social&nbsp;&nbsp;"]
+      day-path-->songhayblog.azurewebsites.net
+   end
+
+   subgraph "fa:fa-server GitHub Pages&nbsp;&nbsp;&nbsp;&nbsp;"
+      songhay-core-->docs-songhay-core["fa:fa-book bryanwilhite.github.io/songhay-core&nbsp;&nbsp;"]
+      SonghayCore-->docs-SonghayCore["fa:fa-book bryanwilhite.github.io/SonghayCore/api&nbsp;&nbsp;"]
+      Songhay.Publications-->docs-Publications["fa:fa-book bryanwilhite.github.io/Songhay.Publications&nbsp;&nbsp;"]
+      the-funky-knowledge-base-->docs-kb["fa:fa-book bryanwilhite.github.io/the-funky-knowledge-base&nbsp;&nbsp;"]
+   end
+
+   subgraph "fa:fa-server netlify&nbsp;&nbsp;&nbsp;&nbsp;"
+      nodejs-->rasx-node-js.netlify.app
+   end
