@@ -61,7 +61,7 @@ The Index Background Strategy is very similar to the Gallery Image Strategy exce
 
 ## remarks about portrait screen sizes
 
-According to [screensiz.es](https://screensiz.es/) as of the writing, the most popular screen size is the portrait of the Apple iPhone 8 Plus: `1080x1920`. This size also hold second place in the Apple iPhone 7 Plus.
+According to [screensiz.es](https://screensiz.es/) as of the writing, the most popular screen size is the portrait of the Apple iPhone 8 Plus: `1080x1920`. This size also holds second place in the Apple iPhone 7 Plus.
 
 According to a mobiforge.com report by Pawel Piejko, “[720×1280 is the most common mobile screen resolution in Q3 2016](https://mobiforge.com/news-comment/720x1280-is-the-most-common-mobile-screen-resolution-in-q3-2016-new-report).”
 
