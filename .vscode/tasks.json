@@ -3,13 +3,20 @@
 
     "tasks": [
         {
-            "command": "jupyter",
-            "label": "jupyter notebook [next to currently opened file]",
-            "isBackground": false,
+            "label": "jupyter notebook [currently selected folder]",
             "type": "shell",
-            "args": ["notebook"],
+            "isBackground": false,
             "options": {
-                "cwd": "${fileDirname}"
+                "cwd": "${workspaceFolder}"
+            },
+            "linux": {
+                "command": "jupyter-notebook",
+            },
+            "windows": {
+                "command": "jupyter",
+                "args": [
+                    "notebook"
+                ]
             },
             "problemMatcher": []
         }
