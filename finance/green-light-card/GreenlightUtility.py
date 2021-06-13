@@ -27,7 +27,7 @@ class GreenlightUtility:
         '''return a pandas DataFrame of CSV transaction dates by rolling balance'''
 
         csv_index_series = df_csv['CsvIndex']
-        amount_series = df_csv['Amount']
+        amount_series = pd.Series(df_csv['Amount'])
         amount_series[0] += starting_balance
 
         transactions_series = amount_series.cumsum()
