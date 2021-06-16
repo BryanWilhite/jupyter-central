@@ -22,4 +22,13 @@ This savings is meant for my daughter to secure her first consumer credit card w
 
 This experience also conceals the real world of interest payments from my daughter. She will have to find out about [negative interest rates](https://www.forbes.com/sites/advisor/2020/05/18/negative-interest-rates-explained-how-could-they-affect-you/#674e77a27b46) later!
 
+## speaking of ‘incredibly inaccurate’…
+
+My ledger is not balancing correctly with Greenlight:
+
+```powershell
+PS> 1301.63 - 273.96 - 2.26 - 1022.27
+3.1400000000001
+```
+
 @[BryanWilhite](https://twitter.com/BryanWilhite)
