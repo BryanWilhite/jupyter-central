@@ -51,12 +51,16 @@ The other major advantage of the `*dib` format is the “polyglot” support:
 #!csharp
 
 var current_directory = System.IO.Directory.GetCurrentDirectory();
-Console.WriteLine($"{nameof(current_directory)}: {current_directory}")
+$"{nameof(current_directory)}: {current_directory}"
 
-#!csharp
+#!pwsh
 
 $current_directory = [System.IO.Directory]::GetCurrentDirectory()
-Write-Output $current_directory
+$current_directory
+
+#!fsharp
+
+__SOURCE_DIRECTORY__
 
 #!markdown
 
