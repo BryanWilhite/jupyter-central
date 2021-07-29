@@ -17,6 +17,6 @@
   "author": "rasx@songhaysystem.com",
   "license": "ISC",
   "dependencies": {
-    "@mermaid-js/mermaid-cli": "^8.10.1"
+    "@mermaid-js/mermaid-cli": "^8.11.0"
   }
 }
