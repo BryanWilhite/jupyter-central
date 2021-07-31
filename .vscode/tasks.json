@@ -19,6 +19,27 @@
                 ]
             },
             "problemMatcher": []
+        },
+        {
+            "label": "mermaid: convert to PNG [with current opened `*.mmd` file]",
+            "type": "shell",
+            "isBackground": false,
+            "options": {
+                "cwd": "${workspaceFolder}/mermaid-js"
+            },
+            "command": "npx",
+            "args": [
+                "mmdc",
+                "--input",
+                "${file}",
+                "--output",
+                "${fileDirname}/${fileBasenameNoExtension}.png",
+                "--theme",
+                "forest",
+                "--width",
+                "1080"
+            ],
+            "problemMatcher": []
         }
     ]
 }
