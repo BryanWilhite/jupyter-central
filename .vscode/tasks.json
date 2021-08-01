@@ -9,15 +9,10 @@
             "options": {
                 "cwd": "${workspaceFolder}"
             },
-            "linux": {
-                "command": "jupyter-notebook",
-            },
-            "windows": {
-                "command": "jupyter",
-                "args": [
-                    "notebook"
-                ]
-            },
+            "command": "jupyter",
+            "args": [
+                "notebook"
+            ],
             "problemMatcher": []
         },
         {
