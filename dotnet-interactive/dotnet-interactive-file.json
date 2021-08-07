@@ -1,0 +1,5 @@
+{
+    "what": "some JSON",
+    "why": "to share it with another subkernel",
+    "where": "in a file"
+}
