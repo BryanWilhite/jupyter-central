@@ -1,0 +1,9 @@
+#!markdown
+
+## the `.dib` file format
+
+[Jon Sequeira](https://github.com/jonsequitur) opens a discussion under issue [#467](https://github.com/dotnet/interactive/issues/467), trying to explain why the `*.dib` format is around:
+
+>The primary reason for the experimental file format supported by .NET Interactive Notebooks is that there are a few design decisions to be worked out to enable the Microsoft Python extension for Visual Studio Code and the .NET Interactive Notebooks extension to work well together. Until a design is agreed upon, we want to avoid introducing potential compatibility issues into `.ipynb`.
+
+On disk, as of this writing, a `.dib` file is just Markdown text file. Unlike the Jupyter `*.ipynb` format, this “experimental” file format does not save cell output.
