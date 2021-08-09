@@ -18,6 +18,8 @@ In order to test `*.ipynb` files in the browser with the `jupyter notebook` comm
 
 ## known issues
 
+The following issues might already be among or need to be added to [over 200 issues on GitHub](https://github.com/dotnet/interactive/issues):
+
 ### notebooks are modified simply by opening them
 
 Opening an `*.ipynb` file in Visual Studio Code or in the browser with the `jupyter notebook` command might modify the file. Predominantly, cell outputs are being modified:
