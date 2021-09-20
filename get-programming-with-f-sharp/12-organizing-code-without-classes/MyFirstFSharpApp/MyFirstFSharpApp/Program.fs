@@ -5,7 +5,8 @@ open MyFirstFSharpApp.Operations
 
 [<EntryPoint>]
 let main argv =
-    let joe = { FirstName = "joe"; LastName = "bloggs"; Age = 21 }
-    if joe |> isOlderThan 18 then Console.WriteLine $"{joe.FirstName} is an adult!"
-    else Console.WriteLine $"{joe.FirstName} is a child."
+    let joe = { FirstName = "Joe"; LastName = "Bloggs"; Age = 21 }
+    if joe |> isOlderThan 18 then Console.WriteLine $"{joe |> getInitials} is an adult!"
+    else Console.WriteLine $"{joe |> getInitials} is a child."
+
     0 // return an integer exit code
