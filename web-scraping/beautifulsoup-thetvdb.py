@@ -3,6 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 import re
 import xml.etree.ElementTree as ET
+from datetime import datetime
 
 def getEpisodeDetailsXmlTree(titleValue, plotValue):
     episodedetails = ET.Element('episodedetails')
@@ -13,7 +14,7 @@ def getEpisodeDetailsXmlTree(titleValue, plotValue):
 
     return ET.ElementTree(episodedetails)
 
-def getPlot(uriPath, title):
+def getEpisodePlot(uriPath, title):
     response = requests.get(f'https://www.thetvdb.com{uriPath}')
     html = response.content.decode()
     soup = BeautifulSoup(html, 'html.parser')
@@ -21,10 +22,21 @@ def getPlot(uriPath, title):
 
     return str(div.p.string).strip()
 
-def getPlotUri(cell):
+def getEpisodePlotUri(cell):
     a = cell.find('a')
 
     return a['href']
+
+def getEpisodeTitle(cell):
+    a = cell.find('a')
+
+    return a.string.strip()
+
+def getEpisodeYear(cell):
+    div = cell.select_one('div')
+    date = datetime.strptime(div.string, '%B %d, %Y')
+
+    return str(date.year)
 
 def getSeriesPlot(soup):
     div = soup.select_one('div#translations > div[data-language="eng"]')
@@ -42,11 +54,6 @@ def getSoup(location):
     soup = BeautifulSoup(html, 'html.parser')
 
     return soup
-
-def getTitle(cell):
-    a = cell.find('a')
-
-    return a.string.strip()
 
 def getTVShowXmlTree(seriesData):
     tvshow = ET.Element('tvshow')
@@ -77,7 +84,7 @@ def getTVShowXmlTree(seriesData):
     # fanart element:
     fanart = ET.SubElement(tvshow, 'fanart')
     for item in [i for i in seriesData['thumbs'] if i['aspect'] == 'fanart']:
-        attrib = dict(aspect=item['dim'])
+        attrib = dict(dim=item['dim'])
         thumb = ET.SubElement(fanart, 'thumb', attrib=attrib)
         thumb.text = item['src']
     # genre elements:
@@ -102,15 +109,17 @@ def yieldEpisodeData(soupTable):
     rows = soupTable.tbody.find_all('tr')
     for row in rows:
         cells = row.find_all('td')
-        title = getTitle(cells[1])
-        plotUri = getPlotUri(cells[1])
-        plot = getPlot(plotUri, title)
+        title = getEpisodeTitle(cells[1])
+        plotUri = getEpisodePlotUri(cells[1])
+        plot = getEpisodePlot(plotUri, title)
+        year = getEpisodeYear(cells[2])
 
         yield {
             'episode' : str(cells[0].string).strip(),
             'title': title,
             'plotUri': plotUri,
-            'plot': plot
+            'plot': plot,
+            'year': year
         }
 
 def yieldSeriesBasicInfo(soup):
@@ -137,6 +146,6 @@ def yieldTVShowActors(soup):
             'src': values[2]
         }
 
-def writeEpisodeDetailsXml(locationTemplate, fileName, xmlTree):
-    fileName = f'{locationTemplate} {fileName}.nfo'
+def writeEpisodeDetailsXml(locationTemplate, episode, year, xmlTree):
+    fileName = f'{locationTemplate} ({year}) {episode}.nfo'
     xmlTree.write(fileName, encoding='utf-8')
