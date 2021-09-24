@@ -148,4 +148,4 @@ def yieldTVShowActors(soup):
 
 def writeEpisodeDetailsXml(locationTemplate, episode, year, xmlTree):
     fileName = f'{locationTemplate} ({year}) {episode}.nfo'
-    xmlTree.write(fileName, encoding='utf-8')
+    xmlTree.write(fileName, encoding='utf-8', xml_declaration=True)
