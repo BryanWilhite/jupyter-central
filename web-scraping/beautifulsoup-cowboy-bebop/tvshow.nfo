@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tvshow>
+  <uniqueid default="false" type="tvdb">series/cowboy-bebop</uniqueid>
+  <uniqueid default="true" type="imdb">tt0213338</uniqueid>
+  <title>Cowboy Bebop</title>
+  <sorttitle>Cowboy Bebop</sorttitle>
+  <plot>In the year 2071 humanity has colonized the entire Solar System through the use of "Phase Difference Space Gates". A catastrophic accident occurred during the development of the Gates, damaging both the Earth and the Moon, heavily irradiating the surface, and forcing most of mankind to evacuate to other planets of the Solar System.
+
+Wherever humanity goes, so goes its criminal element, and thus the need for those who hunt criminals. The newly formed solar system police reinstated the bounty scheme of the Wild West. Cowboy Bebop is the story of the four inhabitants of the spaceship Bebop, and the living they barely make at bounty hunting.</plot>
+  <thumb aspect="banner">https://artworks.thetvdb.com/banners/graphical/76885-g2_t.jpg</thumb>
+  <thumb aspect="poster">https://artworks.thetvdb.com/banners/posters/76885-3_t.jpg</thumb>
+  <thumb aspect="poster" season="1" type="season">https://artworks.thetvdb.com/banners/posters/76885-3_t.jpg</thumb>
+  <fanart>
+    <thumb dim="640x360">https://artworks.thetvdb.com/banners/fanart/original/5d8e636ab0d05_t.jpg</thumb>
+  </fanart>
+  <genre>Action</genre>
+  <genre>Adventure</genre>
+  <genre>Anime</genre>
+  <genre>Science Fiction</genre>
+  <genre>Western</genre>
+  <actor>
+    <name>Kouichi Yamadera</name>
+    <role>Spike Spiegel</role>
+    <thumb>https://artworks.thetvdb.com/banners/person/7916957/62110430.jpg</thumb>
+  </actor>
+  <actor>
+    <name>Unshou Ishizuka</name>
+    <role>Jet Black</role>
+    <thumb>https://artworks.thetvdb.com/banners/person/7878699/61206663.jpg</thumb>
+  </actor>
+  <actor>
+    <name>Megumi Hayashibara</name>
+    <role>Faye Valentine</role>
+    <thumb>https://artworks.thetvdb.com/banners/person/282368/61206666.jpg</thumb>
+  </actor>
+  <actor>
+    <name>Aoi Tada</name>
+    <role>Edward Wong Hau Pepelu Tivrusky IV</role>
+    <thumb>https://artworks.thetvdb.com/banners/person/418405/61206662.jpg</thumb>
+  </actor>
+</tvshow>

@@ -14,11 +14,11 @@ def getEpisodeDetailsXmlTree(titleValue, plotValue):
 
     return ET.ElementTree(episodedetails)
 
-def getEpisodePlot(uriPath, title):
+def getEpisodePlot(uriPath):
     response = requests.get(f'https://www.thetvdb.com{uriPath}')
     html = response.content.decode()
     soup = BeautifulSoup(html, 'html.parser')
-    div = soup.find('div', { 'data-title' : title })
+    div = soup.select_one('div#translations > div[data-language="eng"]')
 
     return str(div.p.string).strip()
 
@@ -111,7 +111,7 @@ def yieldEpisodeData(soupTable):
         cells = row.find_all('td')
         title = getEpisodeTitle(cells[1])
         plotUri = getEpisodePlotUri(cells[1])
-        plot = getEpisodePlot(plotUri, title)
+        plot = getEpisodePlot(plotUri)
         year = getEpisodeYear(cells[2])
 
         yield {
