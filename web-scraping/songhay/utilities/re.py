@@ -1,7 +1,9 @@
 import re
 
 def getSortTitle(value):
-    re.sub('^[Tt]he ', '', value)
+
+    return re.sub('^[Tt]he ', '', value)
 
 def trimStart(needle, haystack):
-    re.sub(f'^{needle}', '', haystack)
+
+    return re.sub(f'^{needle}', '', haystack)
