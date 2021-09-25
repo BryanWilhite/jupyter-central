@@ -59,3 +59,7 @@ def getTVShowXmlTree(seriesData):
         thumb.text = a['src']
 
     return ET.ElementTree(tvshow)
+
+def writeEpisodeDetailsXml(locationTemplate, episode, year, xmlTree):
+    fileName = f'{locationTemplate} ({year}) {episode}.nfo'
+    xmlTree.write(fileName, encoding='utf-8', xml_declaration=True)
