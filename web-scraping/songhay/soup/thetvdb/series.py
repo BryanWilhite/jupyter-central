@@ -1,4 +1,5 @@
 import songhay.utilities.re as re
+import songhay.utilities.soup as bs
 
 def getSeriesPlot(soup):
     div = soup.select_one('div#translations > div[data-language="eng"]')
@@ -21,7 +22,10 @@ def yieldSeriesBasicInfo(soup):
 def yieldSeriesActors(soup):
     h2 = soup.select_one('h2')
     div = h2.find_next_sibling('div')
-    a_elements = div.select('a')
+    return yieldSeriesActorsFromElementChildren(div)
+
+def yieldSeriesActorsFromElementChildren(parentElement):
+    a_elements = parentElement.select('a')
     for a in a_elements:
         values = list(a.select_one('div > h3').stripped_strings)
         img = a.select_one('img')
@@ -33,3 +37,8 @@ def yieldSeriesActors(soup):
             'role': values[1],
             'src': values[2]
         }
+
+def yieldSeriesActorsFromSeparatePage(uriPath):
+    soup = bs.getSoup(f'https://www.thetvdb.com{uriPath}')
+    div = soup.select_one('div.row.thumbnail-mousey')
+    return yieldSeriesActorsFromElementChildren(div)
