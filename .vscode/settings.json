@@ -1,11 +1,13 @@
 {
     "cSpell.words": [
-        "Coursera",
-        "Skiena",
         "algorist",
         "combinatorial",
+        "Coursera",
         "jupyter",
-        "pseudocode"
+        "polytypism",
+        "pseudocode",
+        "Skiena",
+        "subtyping"
     ],
     "markdownlint.config": {
         "MD002": false, //first header should be a top-level header
