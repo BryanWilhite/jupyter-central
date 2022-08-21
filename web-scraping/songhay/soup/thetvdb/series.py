@@ -15,7 +15,7 @@ def yieldSeriesBasicInfo(soup):
     li_elements = soup.select('div#series_basic_info > ul > li')
     for li in li_elements:
         key = li.select_one('strong').string.strip()
-        values = [span.string.strip() for span in li.select('span')]
+        values = [span.string.strip() for span in li.select('span') if not span.string is None]
 
         yield (key, values)
 
@@ -28,9 +28,13 @@ def yieldSeriesActorsFromElementChildren(parentElement):
     a_elements = parentElement.select('a')
     for a in a_elements:
         values = list(a.select_one('div > h3').stripped_strings)
-        img = a.select_one('img')
-        values.append(img['src'])
         values[1] = re.trimStart('as ', str(values[1]))
+
+        img = a.select_one('img')
+        if 'src' in img.attrs.keys():
+            values.append(img['src'])
+        else:
+            values.append(img['data-src'])
 
         yield {
             'name': values[0],
