@@ -1,6 +1,12 @@
 from datetime import datetime
 import songhay.utilities.soup as bs
 
+def getEpisodePlot(div):
+    if not div.p.string is None:
+        return div.p.string.strip()
+    else:
+        return '[not found]'
+
 def getEpisodeData(uriPath):
     soup = bs.getSoup(f'https://www.thetvdb.com{uriPath}')
     h1 = soup.select_one('h1.translated_title')
@@ -8,7 +14,7 @@ def getEpisodeData(uriPath):
 
     return {
         'title': h1.string.strip(),
-        'plot': div.p.string.strip()
+        'plot': getEpisodePlot(div)
     }
 
 def getEpisodeDataUri(cell):
