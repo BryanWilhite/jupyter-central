@@ -28,13 +28,19 @@ def yieldSeriesActorsFromElementChildren(parentElement):
     a_elements = parentElement.select('a')
     for a in a_elements:
         values = list(a.select_one('div > h3').stripped_strings)
+
         values[1] = re.trimStart('as ', str(values[1]))
 
         img = a.select_one('img')
-        if 'src' in img.attrs.keys():
-            values.append(img['src'])
+
+        img_key = 'src'
+        if not 'src' in img.attrs.keys():
+            img_key = 'data-src'
+
+        if len(values) > 2:
+            values[2] = img[img_key]
         else:
-            values.append(img['data-src'])
+            values.append(img[img_key])
 
         yield {
             'name': values[0],
