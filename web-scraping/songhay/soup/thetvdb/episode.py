@@ -27,18 +27,21 @@ def getEpisodeTitle(cell):
 
     return a.string.strip()
 
-def getEpisodeYear(cell):
+def getEpisodeYear(cell, defaultYear):
     div = cell.select_one('div')
-    date = datetime.strptime(div.string, '%B %d, %Y')
+    try:
+        date = datetime.strptime(div.string, '%B %d, %Y')
 
-    return str(date.year)
+        return str(date.year)
+    except:
+        return defaultYear
 
-def yieldEpisodeData(soupTable):
+def yieldEpisodeData(soupTable, defaultYear = '[not found]'):
     rows = soupTable.tbody.find_all('tr')
     for row in rows:
         cells = row.find_all('td')
         title = getEpisodeTitle(cells[1])
-        year = getEpisodeYear(cells[2])
+        year = getEpisodeYear(cells[2], defaultYear)
         episode_data_uri = getEpisodeDataUri(cells[1])
         episode_data = getEpisodeData(episode_data_uri)
         if(title != episode_data['title']):
