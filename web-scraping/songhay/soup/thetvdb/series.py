@@ -9,7 +9,7 @@ def getSeriesPlot(soup):
 def getSeriesTitle(soup):
     h1 = soup.select_one('h1#series_title')
 
-    return h1.string.strip()
+    return h1.string.strip().replace(':', ' -')
 
 def yieldSeriesBasicInfo(soup):
     li_elements = soup.select('div#series_basic_info > ul > li')
