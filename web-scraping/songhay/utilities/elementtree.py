@@ -10,6 +10,54 @@ def getEpisodeDetailsXmlTree(titleValue, plotValue):
 
     return ET.ElementTree(episodedetails)
 
+def getMovieXmlTree(movieData):
+    movie = ET.Element('movie')
+    for item in movieData['uniqueids']:
+        type = item['type']
+        attrib = dict(
+            type=type,
+            default=str(type == 'imdb').lower()
+        )
+        uniqueid = ET.SubElement(movie, 'uniqueid', attrib=attrib)
+        uniqueid.text = item['uniqueid']
+    title = ET.SubElement(movie, 'title')
+    title.text = movieData['title']
+    sorttitle = ET.SubElement(movie, 'sorttitle')
+    sorttitle.text = re.getSortTitle(str(movieData['title']))
+    plot = ET.SubElement(movie, 'plot')
+    plot.text = movieData['plot']
+    # fanart element:
+    fanart = ET.SubElement(movie, 'fanart')
+    for item in [i for i in movieData['thumbs'] if i['aspect'] == 'fanart']:
+        attrib = dict(dim=item['dim'])
+        thumb = ET.SubElement(fanart, 'thumb', attrib=attrib)
+        thumb.text = item['src']
+    # genre element:
+    genre = ET.SubElement(movie, 'genre')
+    genre.text =  movieData['genre']
+    # country element:
+    country = ET.SubElement(movie, 'country')
+    country.text =  movieData['country']
+    # director element:
+    director = ET.SubElement(movie, 'director')
+    director.text =  movieData['director']
+    # year element:
+    year = ET.SubElement(movie, 'year')
+    year.text =  movieData['year']
+    # actor elements:
+    for a in movieData['actors']:
+        actor = ET.SubElement(movie, 'actor')
+        key = 'name'
+        name = ET.SubElement(actor, key)
+        name.text = a[key]
+        key = 'role'
+        role = ET.SubElement(actor, key)
+        role.text = a[key]
+        thumb = ET.SubElement(actor, 'thumb')
+        thumb.text = a['src']
+
+    return ET.ElementTree(movie)
+
 def getTVShowXmlTree(seriesData):
     tvshow = ET.Element('tvshow')
     for item in seriesData['uniqueids']:
