@@ -26,12 +26,6 @@ def getMovieXmlTree(movieData):
     sorttitle.text = re.getSortTitle(str(movieData['title']))
     plot = ET.SubElement(movie, 'plot')
     plot.text = movieData['plot']
-    # fanart element:
-    fanart = ET.SubElement(movie, 'fanart')
-    for item in [i for i in movieData['thumbs'] if i['aspect'] == 'fanart']:
-        attrib = dict(dim=item['dim'])
-        thumb = ET.SubElement(fanart, 'thumb', attrib=attrib)
-        thumb.text = item['src']
     # genre element:
     genre = ET.SubElement(movie, 'genre')
     genre.text =  movieData['genre']
