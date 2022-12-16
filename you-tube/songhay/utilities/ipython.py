@@ -6,17 +6,16 @@ According to “[How to Download YouTube Video Thumbnails](https://www.howtogeek
 
 def display_video(video_id, title, image_name):
     figure = ''.join([
-        '<figure style="display: inline-block;">',
+        '<div id="figure-block" style="display: inline-block;margin:2rem;">',
         f'<a href="https://www.youtube.com/watch?v={video_id}">',
         f'<img alt="{title}" src="https://img.youtube.com/vi/{video_id}/{image_name}" width="480" />',
         '</a>',
         '<br />',
         f'<small>{title}</small>',
-        '</figure>',
+        '</div>',
     ])
-    i_frame = display.YouTubeVideo(video_id)._repr_html_()
 
-    return f'{figure}{i_frame}'
+    return figure
 
 def display_videos(picks):
     html = list()
