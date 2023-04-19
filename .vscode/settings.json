@@ -15,4 +15,5 @@
         "MD041": false //first line in file should be a top-level header
     },
     "jupyter.jupyterServerType": "local",
+    "FSharp.suggestGitignore": false,
 }
