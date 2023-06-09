@@ -20,10 +20,10 @@ def display_video(video_id, title, image_name):
 def display_videos(picks):
     html = list()
     for video_id, title in picks:
-        image_name = 'maxresdefault.jpg'
-        no_max_res = '[no-max-res]'
-        if video_id.endswith(no_max_res):
-            image_name = 'hqdefault.jpg'
-            video_id = video_id.replace(no_max_res, '')
-        html.append(display_video(video_id, title, image_name))
+        res_name = 'maxresdefault'
+        video_id_array = video_id.split(',')
+        if len(video_id_array) > 1:
+            video_id = video_id_array[0]
+            res_name = video_id_array[1]
+        html.append(display_video(video_id, title, f'{res_name}.jpg'))
     return display.HTML(''.join(html))
