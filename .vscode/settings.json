@@ -15,5 +15,6 @@
         "MD041": false //first line in file should be a top-level header
     },
     "FSharp.suggestGitignore": false,
-    "FSharp.showExplorerOnStartup": false
+    "FSharp.showExplorerOnStartup": false,
+    "dotnet.defaultSolution": "disable"
 }
