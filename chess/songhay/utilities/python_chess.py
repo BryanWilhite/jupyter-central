@@ -76,10 +76,17 @@ def get_taken_html(taken: "list[str]", size=24):
 
     return f'<div style="background-color:rgba(217, 217, 217, 0.5);margin:.5em">{"".join(html)}</div>'
 
-def request_lichess_pgn(id):
-    '''Request lichess.org PGN data.'''
+def request_lichess_pgn(id, game_type='game/export'):
+    '''
+    Request lichess.org PGN data.
+        known `game_type=` values: 'game/export' (default), 'study'
+    '''
 
-    uri = f'https://lichess.org/game/export/{id}?literate=1'
+    uri = f'https://lichess.org/{game_type}/{id}?literate=1'
+
+    if game_type == 'study':
+        uri = f'https://lichess.org/{game_type}/{id}.pgn'
+
     resp = request.urlopen(uri)
 
     return resp.read().decode('UTF-8')
