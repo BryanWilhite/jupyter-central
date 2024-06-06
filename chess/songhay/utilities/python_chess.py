@@ -2,6 +2,7 @@ from urllib import request
 from io import StringIO 
 import chess, chess.pgn, chess.svg
 
+full_move_number = 0
 last_turn = 1
 last_san = ""
 move_list = []
@@ -15,7 +16,7 @@ def get_board_html(board,move_index=0,
                    arrows=[]):
     '''Gets the HTML to display the python-chess Board.'''
 
-    global last_turn, last_san, move_list, black_taken, white_taken
+    global full_move_number, last_turn, last_san, move_list, black_taken, white_taken
 
     move = move_list[move_index]
     san = last_san
@@ -28,6 +29,11 @@ def get_board_html(board,move_index=0,
         last_turn = board.turn
         board.push(move_list[move_index])
 
+        if move_index % 2 == 0:
+            full_move_number = full_move_number + 1
+        else:
+            pass
+
         if taken and not is_white_move:
             black_taken.append(taken)
 
@@ -37,12 +43,14 @@ def get_board_html(board,move_index=0,
     html = ''.join([
         '<div id="svg-board-block" style="display: inline-block; margin:.5em">',
         '<h2>',
-        f'    <small>exchange {board.fullmove_number}:</small>',
-        f'    {"white" if is_white_move else "black"} {san}',
+        '    <small style="color:rgba(217, 217, 217, 0.5)" title="exchange number">',
+        f'{full_move_number}:</small>',
+        '    <small style="color:rgba(217, 217, 217, 0.5)" title="exchange number">',
+        f'{"White" if is_white_move else "Black"}</small> {san}',
         '</h2>',
-        f'    <div>{get_taken_html(white_taken,size=taken_size)}</div>',
-        chess.svg.board(board, arrows=arrows, size=board_size) if len(arrows) > 0 else chess.svg.board(board, size=board_size),
         f'    <div>{get_taken_html(black_taken,size=taken_size)}</div>',
+        chess.svg.board(board, arrows=arrows, size=board_size) if len(arrows) > 0 else chess.svg.board(board, size=board_size),
+        f'    <div>{get_taken_html(white_taken,size=taken_size)}</div>',
         '</div>',
     ])
 
