@@ -13,7 +13,8 @@ def get_board_html(board,move_index=0,
                    taken='',
                    board_size=240,
                    taken_size=24,
-                   arrows=[]):
+                   arrows=[],
+                   is_question=False):
     '''Gets the HTML to display the python-chess Board.'''
 
     global full_move_number, last_turn, last_san, move_list, black_taken, white_taken
@@ -40,6 +41,12 @@ def get_board_html(board,move_index=0,
         if taken and is_white_move:
             white_taken.append(taken)
 
+        if is_question:
+            arrows.append(
+                chess.svg.Arrow(move_list[move_index].to_square,
+                                move_list[move_index].to_square,
+                                color='#cf1020'))
+
     html = ''.join([
         '<div id="svg-board-block" style="display: inline-block; margin:.5em">',
         '<h2>',
@@ -47,12 +54,15 @@ def get_board_html(board,move_index=0,
         f'{full_move_number}:</small>',
         '    <small style="color:rgba(217, 217, 217, 0.5)" title="exchange number">',
         f'{"White" if is_white_move else "Black"}</small> {san}',
+        f'{"<span style=""color:#cf1020"">?!</span>" if is_question else ""}',
         '</h2>',
         f'    <div>{get_taken_html(black_taken,size=taken_size)}</div>',
         chess.svg.board(board,arrows=arrows,lastmove=move_list[move_index],size=board_size),
         f'    <div>{get_taken_html(white_taken,size=taken_size)}</div>',
         '</div>',
     ])
+
+    arrows.clear()
 
     return html
 
