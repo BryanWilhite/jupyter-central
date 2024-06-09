@@ -49,7 +49,7 @@ def get_board_html(board,move_index=0,
         f'{"White" if is_white_move else "Black"}</small> {san}',
         '</h2>',
         f'    <div>{get_taken_html(black_taken,size=taken_size)}</div>',
-        chess.svg.board(board, arrows=arrows, size=board_size) if len(arrows) > 0 else chess.svg.board(board, size=board_size),
+        chess.svg.board(board,arrows=arrows,lastmove=move_list[move_index],size=board_size),
         f'    <div>{get_taken_html(white_taken,size=taken_size)}</div>',
         '</div>',
     ])
