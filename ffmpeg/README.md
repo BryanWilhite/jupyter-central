@@ -24,4 +24,4 @@ This folder contains my notes on my use of `ffmpeg`. Currently, the assumptions 
 }
 ```
 
-@[BryanWilhite](https://twitter.com/BryanWilhite)
+[Bryan Wilhite is on LinkedIn](https://www.linkedin.com/in/wilhite)🇺🇸💼

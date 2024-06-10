@@ -67,4 +67,4 @@ According to a mobiforge.com report by Pawel Piejko, “[720×1280 is the most c
 
 For more details, see “[studio status report: 2020-08](http://songhayblog.azurewebsites.net/entry/2020-08-30-studio-status-report-2020-08/).”
 
-@[BryanWilhite](https://twitter.com/BryanWilhite)
+[Bryan Wilhite is on LinkedIn](https://www.linkedin.com/in/wilhite)🇺🇸💼

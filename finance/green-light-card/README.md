@@ -31,4 +31,4 @@ PS> 1301.63 - 273.96 - 2.26 - 1022.27
 3.1400000000001
 ```
 
-@[BryanWilhite](https://twitter.com/BryanWilhite)
+[Bryan Wilhite is on LinkedIn](https://www.linkedin.com/in/wilhite)🇺🇸💼

@@ -20,4 +20,4 @@ The notebooks in this folder cover the following features of Wand/ImageMagick:
 
 [[🔗 link](https://github.com/BryanWilhite/jupyter-central/tree/master/wand/wand_03_drawing_composites.ipynb)]
 
-@[BryanWilhite](https://twitter.com/BryanWilhite)
+[Bryan Wilhite is on LinkedIn](https://www.linkedin.com/in/wilhite)🇺🇸💼

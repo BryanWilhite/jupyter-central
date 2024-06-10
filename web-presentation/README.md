@@ -10,4 +10,4 @@ The new Presentation stack includes:
 - [Azure App Service](https://docs.microsoft.com/en-us/azure/app-service/overview) is the Presentation destination of choice for Songhay Publications.
 - The Songhay Publications Kinté Space project is the first customer of `Songhay.Publications`.
 
-@[BryanWilhite](https://twitter.com/BryanWilhite)
+[Bryan Wilhite is on LinkedIn](https://www.linkedin.com/in/wilhite)🇺🇸💼

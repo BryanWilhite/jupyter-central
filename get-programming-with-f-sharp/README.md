@@ -4,4 +4,4 @@
 
 These are my yellow-highlighter notes.
 
-@[BryanWilhite](https://twitter.com/BryanWilhite)
+[Bryan Wilhite is on LinkedIn](https://www.linkedin.com/in/wilhite)🇺🇸💼

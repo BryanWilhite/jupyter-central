@@ -51,4 +51,4 @@ The Visual Studio Code experience might encourage the omission of explicitly spe
 - [`dotnet-interactive-04-interactive-object.ipynb`](./dotnet-interactive-04-interactive-object.ipynb)
 - [`dotnet-interactive-06-fsharp-datavis.ipynb`](./dotnet-interactive-06-fsharp-datavis.ipynb)
 
-@[BryanWilhite](https://twitter.com/BryanWilhite)
+[Bryan Wilhite is on LinkedIn](https://www.linkedin.com/in/wilhite)🇺🇸💼
