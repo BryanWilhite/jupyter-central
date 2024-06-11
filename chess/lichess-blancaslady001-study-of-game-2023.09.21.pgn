@@ -1,0 +1,17 @@
+[Event "Rated Rapid game"]
+[Site "https://lichess.org/gojKc6hF"]
+[Date "2023.09.21"]
+[White "Ivnn"]
+[Black "blancaslady001"]
+[Result "0-1"]
+[WhiteElo "1684"]
+[BlackElo "1777"]
+[TimeControl "780+0"]
+[Termination "Normal"]
+[Annotator "https://lichess.org/@/blancaslady001"]
+[Variant "Standard"]
+[ECO "C23"]
+[Opening "Bishop's Opening: Calabrese Countergambit"]
+
+1. e4 { [%clk 0:13:00] } 1... e5 { [%clk 0:13:00] } 2. Bc4 { [%clk 0:12:59] } 2... f5 { [%clk 0:12:57] } 3. exf5 { [%clk 0:12:57] } 3... Nf6 { [%clk 0:12:52] } 4. d3 { [%clk 0:12:56] } 4... d5 { [%clk 0:12:50] } 5. Bb3 { [%clk 0:12:53] } 5... Bxf5 { [%clk 0:12:48] } 6. h3 { [%clk 0:12:49] } 6... Bd6 { [%clk 0:12:40] } 7. Nf3 { [%clk 0:12:40] } 7... c6 { [%clk 0:12:30] } 8. O-O { [%clk 0:12:38] } 8... O-O { [%clk 0:12:28] } 9. Qe1 { [%clk 0:12:01] } 9... Nbd7 { The count is 2 vs 2 (it's even, so white CANNOT take) } { [%csl Re5][%cal Gf3e5,Ge1e5,Bd6e5,Bd7e5] [%clk 0:12:24] } 10. Nc3 { [%clk 0:11:56] } 10... Kh8 { Kh8= releasing the stress of the pin (Bb3) } { [%csl Rb3][%cal Gg8h8,Rb3g8] [%clk 0:12:17] } 11. Bg5 { [%clk 0:11:43] } 11... Qc7 { Qc7 releasing the stress of the Bg5 pin } { [%cal Rg5d8,Gd8c7] [%clk 0:12:07] } 12. Bh4 { [%clk 0:11:18] } 12... Nc5 { [%clk 0:11:54] } 13. Bg3 { [%clk 0:11:08] } 13... Rae8 { [%clk 0:11:39] } 14. Qc1 { [%clk 0:10:22] } 14... h6 { "h6" thwarts Qg5 } { [%csl Bh6,Bc1][%cal Bh6g5] [%clk 0:11:14] } (14... a6 15. Qg5 Nfd7 16. Rfe1 { [%csl Be1,Bf3,Bg3,Bg5,Re5][%cal Bg5e5,Bf3e5,Bg3e5,Be1e5] }) 15. Re1 { "Rf1" is an x-ray attack
+-wins a pawn } { [%csl Rf3,Rf8][%cal Rf8f3] [%clk 0:10:05] } 15... Nh5 { [%clk 0:11:01] } 16. Bh2 { [%clk 0:10:01] } 16... Bxh3 { [%csl Rf8,Bg2][%cal Rf8f3] [%clk 0:10:45] } 17. gxh3 { [%clk 0:09:38] } 17... Rxf3 { [%clk 0:10:43] } 18. Ne2 { [%clk 0:09:16] } 18... Qf7 { [%clk 0:10:26] } 19. Rf1 { [%clk 0:09:03] } 19... Rf8 { 3 vs 2 on f2 pawn } { [%csl Bf3,Bf7,Bf8,Rf2][%cal Bf8f3] [%clk 0:09:53] } 20. Qe1 { 3 vs 3 on f2 pawn (Black CANNOT take) } { [%csl Bg1,Bf1,Be1,Gf8,Gf7,Gf3,Rf2][%cal Be1f2,Bf1f2,Bg1f2] [%clk 0:08:43] } 20... Qg6+ { [%clk 0:09:47] } 21. Ng3 { [%clk 0:08:42] } 21... Ne6 { Black's idea= fork the King and Queen on "f3" } { [%csl Rf3][%cal Be6d4,Bd4f3,Rf3e1,Rf3g1] [%clk 0:08:48] } 22. h4 { [%clk 0:07:36] } 22... Nd4 { [%clk 0:08:24] } 23. c3 { [%clk 0:07:28] } 23... Rxg3+ { [%clk 0:08:20] } 24. Bxg3 { [%clk 0:07:24] } 24... Nf3+ { [%clk 0:08:18] } 25. Kg2 { [%clk 0:07:07] } 25... Nxe1+ { [%clk 0:08:16] } 26. Raxe1 { [%clk 0:06:58] } 26... e4 { [%clk 0:07:51] } 27. Kh1 { [%clk 0:06:47] } 27... Bxg3 { [%clk 0:07:47] } 28. fxg3 { [%clk 0:06:43] } 28... Nxg3+ { 0-1 White resigns. } { [%clk 0:07:46] } 0-1

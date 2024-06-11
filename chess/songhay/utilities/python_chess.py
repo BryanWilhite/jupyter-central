@@ -14,6 +14,7 @@ def get_board_html(board,move_index=0,
                    board_size=240,
                    taken_size=24,
                    arrows=[],
+                   orientation=chess.WHITE,
                    is_question=False):
     '''Gets the HTML to display the python-chess Board.'''
 
@@ -22,6 +23,7 @@ def get_board_html(board,move_index=0,
     move = move_list[move_index]
     san = last_san
     is_white_move = last_turn
+    is_white_orientation = orientation == chess.WHITE
 
     if(len(board.move_stack) == move_index):
         san = board.san(chess.Move.from_uci(move.uci()))
@@ -56,9 +58,14 @@ def get_board_html(board,move_index=0,
         f'{"White" if is_white_move else "Black"}</small> {san}',
         f'{"<span style=""color:#cf1020"">?!</span>" if is_question else ""}',
         '</h2>',
-        f'    <div>{get_taken_html(black_taken,size=taken_size)}</div>',
-        chess.svg.board(board,arrows=arrows,lastmove=move_list[move_index],size=board_size),
-        f'    <div>{get_taken_html(white_taken,size=taken_size)}</div>',
+        '    <div>',
+        f'{get_taken_html(black_taken if is_white_orientation else white_taken,size=taken_size)}',
+        '    </div>',
+        chess.svg.board(board,orientation=orientation,
+                        arrows=arrows,lastmove=move_list[move_index],size=board_size),
+        '    <div>',
+        f'{get_taken_html(white_taken if is_white_orientation else black_taken,size=taken_size)}',
+        '    </div>',
         '</div>',
     ])
 
