@@ -1,6 +1,6 @@
 # Generating Responsive Images
 
-The [work here](https://github.com/BryanWilhite/jupyter-central/blob/master/wand-responsive-images/generating-responsive-images.ipynb) is a search for responsive-image strategies for my studio.
+The [work here](./generating-responsive-images.ipynb) is a search for responsive-image strategies for my studio.
 
 So far we have about three responsive-image information designs:
 
