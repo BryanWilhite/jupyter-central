@@ -2,69 +2,49 @@
 
 The [work here](./generating-responsive-images.ipynb) is a search for responsive-image strategies for my studio.
 
-So far we have about three responsive-image information designs:
+## the named layouts requiring responsive images
 
-- Gallery Image Strategy
-- Hero Image (and Portrait Hero Image) Strategy
-- Index Background Strategy
+For current Studio Publications, there are five named layouts:
 
-## Gallery Image Strategy
+1. the Open Graph protocol metadata
+2. the “hero” index splash
+3. the “hero” index lists
+4. the prose opening image
+5. the prose inline image
 
-The design goal of the ‘gallery’ image is the desire to display an image at a _maximum_ resolution, full-screen, landscape orientation. This desire could be satisfied in a full-screen hero image layout or the typical gallery presentation.
+## the categories of responsive images
 
-We start with a Full HD (1080p) image: `1920x1080`
+There are four categories of responsive images:
 
-From the starting image we generate the following:
+1. 16:9 landscape (for “hero” index splash and prose)
+2. 9:16 portrait (for inline-image prose)
+3. 1:1 square (for index lists and [[Open Graph protocol]])
+4. 16:(9/3) banner (for “hero” index splash and prose)
 
-| name | size | operation
-|- |- |-
-| `gallery-720p` | `1280x720` | resize
-| `gallery-sd` | `640x480` | crop 720p
-| `gallery-thumb` | `120x120` | crop SD
+## the responsive breakpoints of images
 
-## Hero Image Strategy
+This Studio has standardized on Bulma and will follow its breakpoint definitions \[📖 [docs](https://bulma.io/documentation/start/responsiveness/#breakpoints) \]:
 
-One approach to a design based on the “hero” image is to start with a Full HD landscape and crop down, using rule-of-thirds vertical dimensions.
+| Bulma breakpoint name | Bulma width range | 16:9 dimensions within range                                                                                                            | squares            |
+| --------------------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
+| mobile                | `0–768px`         | `160×90` (90p?)<br>`426×240` (240p)<br>`640×360` (nHD/360p)                                                                             | `160×160` (square) |
+| tablet                | `769–1023px`      | `854×480` (480p)<br>`854×160` (banner)                                                                                                  |                    |
+| desktop               | `1024–1215px`     | `1024×576` ([EDTV](https://en.wikipedia.org/wiki/Enhanced-definition_television))<br>                                                   | `360×360` (square) |
+| widescreen            | `1216–1407px`     | `1280×720` (HD/720p)<br>`1280×240` (banner)<br>`1360×765` ([WXGA](https://en.wikipedia.org/wiki/Display_resolution_standards#1280x768)) |                    |
+| full HD               | `>1408px`         | `1920×1080` (1080p)<br>`1920×360` (banner)<br>`2560×1440` (2K/1440p)                                                                    | `640×640` (square) |
 
-We start with a Full HD (1080p) image: `1920x1080`
+According to “[Complete List of all 16:9 Resolutions — from SD to 16K UHD](https://www.game.guide/complete-list-of-all-16-9-resolutions)” the 240p and 360p resolutions come from YouTube. Also, Cloudinary has a [Responsive Image Breakpoints Generator](https://www.responsivebreakpoints.com/) in case I am missing something in my table above—and in the wisdom of Bulma.
 
-From the starting image we generate the following with vertical, rule-of-thirds dimensions:
+## the response strategies for each layout, specifying image resolutions
 
-| name | size | operation(s)
-|- |- |-
-`hero-1080p` | `1920x640` | crop
-`hero-720p` | `1280x240` | resize, crop
+| layout                                | full HD     | widescreen | desktop   | tablet     | mobile    |
+| ------------------------------------- | ----------- | ---------- | --------- | ---------- | --------- |
+| “hero” index splash                   | `2560×1440` | `1360×765` |           |            | `640×360` |
+| index list (space time, space people) | `640×640`   |            | `360×360` |            |           |
+| index list (visitors)                 |             |            |           |            | `160×160` |
+| prose main image                      |             | `1280×720` |           | `1280×240` |           |
+| inline-image prose                    |             | `720×1280` |           | `360×640`  |           |
 
-## Portrait Hero Image Strategy
-
-Another approach to the “hero” image is the intent to lay it out with text, suggesting that this image will be in a portrait orientation, flowing with, say, text. This would be the typical 20<sup>th</sup> magazine layout of the print era.
-
-We start with a Full HD (1080p) image: `1920x1080`
-
-From the starting image we generate the following with horizontal, rule-of-thirds dimensions:
-
-| name | size | operation(s)
-|- |- |-
-`hero-portrait-1080p` | `640x1080` | crop
-`hero-portrait-720p` | `427x720` | resize, crop
-
-## Index Background Strategy
-
-The Index Background Strategy is very similar to the Gallery Image Strategy except that  portrait orientation must be taken into account. We can do this by starting with two different originals. One is portrait (`1080x1920`), the other landscape (HD):
-
-| original | name | size | operation
-|- |- |- |-
-| `1920x1080` | `index-720p` | `1280x720` | resize
-| `1920x1080` | `index-sd` | `640x480` | crop 720p
-| `1080x1920` | `index-720x1280` | `720x1280` | resize
-| `1080x1920` | `index-480x640` | `480x640` | crop 720x1280
-
-## remarks about portrait screen sizes
-
-According to [screensiz.es](https://screensiz.es/) as of the writing, the most popular screen size is the portrait of the Apple iPhone 8 Plus: `1080x1920`. This size also holds second place in the Apple iPhone 7 Plus.
-
-According to a mobiforge.com report by Pawel Piejko, “[720×1280 is the most common mobile screen resolution in Q3 2016](https://mobiforge.com/news-comment/720x1280-is-the-most-common-mobile-screen-resolution-in-q3-2016-new-report).”
-
-For more details, see “[studio status report: 2020-08](http://songhayblog.azurewebsites.net/entry/2020-08-30-studio-status-report-2020-08/).”
+The ‘index list (visitors)’ layout is not about responsively _resizing_ its square images; it will be about displaying more and more of the squares, responsively.
 
 [Bryan Wilhite is on LinkedIn](https://www.linkedin.com/in/wilhite)🇺🇸💼
