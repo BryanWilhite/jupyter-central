@@ -37,13 +37,13 @@ According to “[Complete List of all 16:9 Resolutions — from SD to 16K UHD](h
 
 ## the response strategies for each layout, specifying image resolutions
 
-| layout                                | full HD     | widescreen | desktop   | tablet     | mobile    |
-| ------------------------------------- | ----------- | ---------- | --------- | ---------- | --------- |
-| “hero” index splash                   | `2560×1440` | `1360×765` |           |            | `640×360` |
-| index list (space time, space people) | `640×640`   |            | `360×360` |            |           |
-| index list (visitors)                 |             |            |           |            | `160×160` |
-| prose main image                      |             | `1280×720` |           | `1280×240` |           |
-| inline-image prose                    |             | `720×1280` |           | `360×640`  |           |
+| layout                                | full HD     | widescreen | desktop   | tablet    | mobile    |
+| ------------------------------------- | ----------- | ---------- | --------- | --------- | --------- |
+| “hero” index splash                   | `2560×1440` | `1360×765` |           |           | `640×360` |
+| index list (space time, space people) | `640×640`   |            | `360×360` |           |           |
+| index list (visitors)                 |             |            |           |           | `160×160` |
+| prose main image                      |             | `1280×240` |           | `854×160` |           |
+| inline-image prose                    |             | `576×1024` |           | `360×640` |           |
 
 The ‘index list (visitors)’ layout is not about responsively _resizing_ its square images; it will be about displaying more and more of the squares, responsively.
 
