@@ -16,5 +16,8 @@
     },
     "FSharp.suggestGitignore": false,
     "FSharp.showExplorerOnStartup": false,
-    "dotnet.defaultSolution": "disable"
+    "dotnet.defaultSolution": "disable",
+    "csharp-dev-tools.solutionViewer.selectedWorkspaceSolutions": [
+        "get-programming-with-f-sharp/12-organizing-code-without-classes/MyFirstFSharpApp/MyFirstFSharpApp.sln"
+    ]
 }
